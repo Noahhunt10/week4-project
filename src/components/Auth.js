@@ -19,9 +19,9 @@ const Auth = () => {
         }
         let URL = ''
        if(register) {
-        URL = `https://socialmtn.devmountain.com/register`
+        URL = `http://localhost:4005/register`
        } else {
-        URL = `https://socialmtn.devmountain.com/login`
+        URL = `http://localhost:4005/login`
        }
        axios    
             .post(URL, body)

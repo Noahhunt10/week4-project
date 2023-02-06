@@ -80,7 +80,11 @@ export const AuthContextProvider = (props) => {
     logoutTimer = setTimeout(logout, remainingTime)
 
   }
-
+  useEffect(() => {
+    if (localData) {
+      logoutTimer = setTimeout(logout, localData.duration)
+    }
+  }, [localData, logout])
 
     
   const contextValue = {
